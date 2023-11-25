@@ -10,9 +10,10 @@ This repository serves as a demonstration of benchmarking scenarios comparing th
 | **with JsonCreator and JsonProperty** | 5290 | 4184 | 5956497 | 1367 | 123012 | 1572 |
 
 **Labels:**
-    - **avg st:** Average Serialization Time
-    - **avg dt:** Average Deserialization Time
-    - **max st:** Longest Serialization Time
-    - **min st:** Shortest Serialization Time
-    - **max dt:** Longest Deserialization Time
-    - **min dt:** Shortest Deserialization Time
+
+- **avg st:** Average Serialization Time
+- **avg dt:** Average Deserialization Time
+- **max st:** Longest Serialization Time
+- **min st:** Shortest Serialization Time
+- **max dt:** Longest Deserialization Time
+- **min dt:** Shortest Deserialization Time

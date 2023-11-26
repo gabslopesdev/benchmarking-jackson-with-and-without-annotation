@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 import scenarios.Results;
 import scenarios.ScenarioWithJsonCreatorAndJsonProperty;
 import scenarios.ScenarioWithJsonProperty;
@@ -14,12 +16,12 @@ public class Benchmarking {
     
            System.out.println("""
             | 
-            | avg st (nanoseconds) 
-            | avg dt (nanoseconds) 
-            | max st (nanoseconds)
-            | min st (nanoseconds)
-            | max dt (nanoseconds) 
-            | avg dt (nanoseconds)
+            | avg st nanoseconds 
+            | avg dt nanoseconds
+            | max st nanoseconds (milliseconds)
+            | min st nanoseconds
+            | max dt nanoseconds (milliseconds)
+            | avg dt nanoseconds
             |""");
            System.out.println("""
             |---------------------------------------
@@ -33,23 +35,23 @@ public class Benchmarking {
            System.out.println(  "| **without annotation** | " 
            + wthoutAnnotation.getAverageSerializationTime() + " | " 
            + wthoutAnnotation.getAverageDeserializationTime() + " | " 
-           + wthoutAnnotation.getLongestSerializationTime() + " | " 
+           + wthoutAnnotation.getLongestSerializationTime() + " ("+  TimeUnit.NANOSECONDS.toMillis(wthoutAnnotation.getLongestSerializationTime()) +") | " 
            + wthoutAnnotation.getShortestSerializationTime() + " | " 
-           + wthoutAnnotation.getLongestDeserializationTime() + " | " 
+           + wthoutAnnotation.getLongestDeserializationTime() + " ("+  TimeUnit.NANOSECONDS.toMillis(wthoutAnnotation.getLongestDeserializationTime()) +") | " 
            + wthoutAnnotation.getShortestDeserializationTime() + " |");
            System.out.println(  "| **with JsonProperty** | " 
            + withJsonProperty.getAverageSerializationTime() + " | " 
            + withJsonProperty.getAverageDeserializationTime() + " | " 
-           + withJsonProperty.getLongestSerializationTime() + " | " 
+           + withJsonProperty.getLongestSerializationTime() + " ("+  TimeUnit.NANOSECONDS.toMillis(withJsonProperty.getLongestSerializationTime()) +") | " 
            + withJsonProperty.getShortestSerializationTime() + " | " 
-           + withJsonProperty.getLongestDeserializationTime() + " | " 
+           + withJsonProperty.getLongestDeserializationTime() + " ("+  TimeUnit.NANOSECONDS.toMillis(withJsonProperty.getLongestDeserializationTime()) +") | " 
            + withJsonProperty.getShortestDeserializationTime() + " |");
            System.out.println(  "| **with JsonCreator and JsonProperty** | " 
            + withJsonCreatorAndJsonProperty.getAverageSerializationTime() + " | " 
            + withJsonCreatorAndJsonProperty.getAverageDeserializationTime() + " | " 
-           + withJsonCreatorAndJsonProperty.getLongestSerializationTime() + " | " 
+           + withJsonCreatorAndJsonProperty.getLongestSerializationTime() + " ("+  TimeUnit.NANOSECONDS.toMillis(withJsonCreatorAndJsonProperty.getLongestSerializationTime()) +") | " 
            + withJsonCreatorAndJsonProperty.getShortestSerializationTime() + " | " 
-           + withJsonCreatorAndJsonProperty.getLongestDeserializationTime() + " | " 
+           + withJsonCreatorAndJsonProperty.getLongestDeserializationTime() + " ("+  TimeUnit.NANOSECONDS.toMillis(withJsonCreatorAndJsonProperty.getLongestDeserializationTime()) +") | " 
            + withJsonCreatorAndJsonProperty.getShortestDeserializationTime() + " |");
 
                

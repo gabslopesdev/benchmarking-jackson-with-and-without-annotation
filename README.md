@@ -5,7 +5,7 @@ This repository serves as a demonstration of benchmarking scenarios comparing th
 ## Display results
 
 - Serialization (Java Object to Json)
-- Deserializations (Json to Java Object)
+- Deserialization (Json to Java Object)
 
 | | avg st nanoseconds | avg dt nanoseconds | max st nanoseconds (milissegundos) | min st nanoseconds | max dt nanoseconds (milissegundos) | avg dt nanoseconds |
 |---------------------------------------|---------------------------------------|---------------------------------------|---------------------------------------|---------------------------------------|---------------------------------------|---------------------------------------|
